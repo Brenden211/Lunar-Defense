@@ -7,6 +7,7 @@ public class Follow : MonoBehaviour
 {
     public Transform target;
     public float updateFrequency = 0.1f;
+    public Animator soldierAnimator;
 
     private float updateCounter = 0;
     private NavMeshAgent agent;
@@ -22,7 +23,6 @@ public class Follow : MonoBehaviour
         
     }
 
-
     void Update()
     {
         if (updateCounter >= updateFrequency)
@@ -33,6 +33,15 @@ public class Follow : MonoBehaviour
         else
         {
             updateCounter += Time.deltaTime;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
+        {
+            Debug.Log("Target Found!");
+            soldierAnimator.SetTrigger("Idle");
         }
     }
 }
