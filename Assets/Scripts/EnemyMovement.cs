@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
 
-public class Follow : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
     public float updateFrequency = 0.1f;
@@ -42,6 +42,7 @@ public class Follow : MonoBehaviour
         {
             Debug.Log("Target Found!");
             soldierAnimator.SetTrigger("Idle");
+            Destroy(gameObject);
         }
     }
 }
