@@ -14,10 +14,13 @@ public class Turret : MonoBehaviour
 
     [Header("Unity Setup")]
     
-    public Transform partToRotate;
     public string enemyTag = "Enemy";
-    public float turnSpeed = 10f;
 
+    public Transform partToRotate;
+    public float turnSpeed = 10f;
+    
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
 
     // Start is called before the first frame update
@@ -77,7 +80,11 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Shoot");
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+            bullet.Seek(target);
     }
 
     private void OnDrawGizmosSelected()
