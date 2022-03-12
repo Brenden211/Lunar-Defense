@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6766543052945372374}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c30557300b02c45b4f208d0423549d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-  positionOffset: {x: 0, y: 57, z: 0}
+  hoverColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
+  positionOffset: {x: 0, y: 16, z: -3.4}
