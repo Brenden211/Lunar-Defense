@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 
     public float panSpeed = 50f;
     public float scrollSpeed = 5f;
+    public float mouseScrollSensitivity = 1000f;
     public float panBorderThickness = 5f;
     public float minY = 10f;
     public float maxY = 80f;
@@ -43,7 +44,7 @@ public class CameraController : MonoBehaviour
 
         Vector3 pos = transform.position;
 
-        pos.y -= scroll * 10000 * scrollSpeed * Time.deltaTime;
+        pos.y -= scroll * mouseScrollSensitivity * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
