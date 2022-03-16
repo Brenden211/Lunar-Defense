@@ -54,6 +54,8 @@ MonoBehaviour:
   waveCountdownText: {fileID: 0}
   waveCounter: 0
   startCountdown: 30
+  gameIsWon: 0
+  gameWonUI: {fileID: 0}
 --- !u!114 &811591685133595642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +85,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoints: 450
-  PlayerHealthBar: {fileID: 0}
   playerStartingHP: 10
 --- !u!114 &811591685133595640
 MonoBehaviour:
