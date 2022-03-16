@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 57914fce122d3fa4bb4ee64f019cafc1
+guid: 07fe6a4a6e312de47a6eecb8abc76063
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - ImpactEffect: {fileID: 362209759925960162, guid: dac13e13a1f0215448fa116681e30810, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
