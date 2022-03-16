@@ -3,23 +3,25 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 100;
-    public int worth = 25;
+    public float starthealth = 100;
     public GameObject deathEffect;
     public Image healthBar;
-    public float startHealth = 100;
+    public int value = 25;
+
+    private float health;
 
     void Start()
     {
-        health = startHealth;
+        health = starthealth;
     }
+
     public void TakeDamage(float amount)
     {
         health -= amount;
 
-        healthBar.fillAmount = health / startHealth;
+        healthBar.fillAmount = health / starthealth;
 
-        if (health < 0)
+        if (health == 0)
         {
             Die();
         }
@@ -27,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Dead!");
+        PlayerStats.Points += value;
         Destroy(gameObject);
     }
 }

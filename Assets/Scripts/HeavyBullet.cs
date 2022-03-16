@@ -5,6 +5,7 @@ public class HeavyBullet : MonoBehaviour
     private Transform target;
 
     public float speed = 70f;
+    public int damage = 25;
     public GameObject ImpactEffect;
 
     public void Seek(Transform _target)
@@ -12,7 +13,6 @@ public class HeavyBullet : MonoBehaviour
         target = _target;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target == null)
@@ -37,8 +37,17 @@ public class HeavyBullet : MonoBehaviour
     {
         GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
-
-        //Destroy(target.gameObject);
         Destroy(gameObject);
+        Damage(target);
+    }
+
+    void Damage (Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 }

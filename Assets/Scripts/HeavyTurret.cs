@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HeavyTurret : MonoBehaviour
@@ -22,10 +20,7 @@ public class HeavyTurret : MonoBehaviour
 
     public GameObject HeavyBulletPrefab;
     public Transform firePoint;
-    public Transform firePointTwo;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -58,13 +53,11 @@ public class HeavyTurret : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target == null)
             return;
 
-        // Target lock-on
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;

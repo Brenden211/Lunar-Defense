@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Target
   - Enemy
+  - playerHealthBar
+  - gameManager
   layers:
   - Default
   - TransparentFX

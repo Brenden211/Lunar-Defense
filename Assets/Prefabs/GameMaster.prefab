@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &811591685133595589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811591685133595643}
+  - component: {fileID: 811591685133595588}
+  - component: {fileID: 811591685133595642}
+  - component: {fileID: 811591685133595641}
+  - component: {fileID: 811591685133595640}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: gameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &811591685133595643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811591685133595589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 166, y: 0, z: 86.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811591685133595588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811591685133595589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b877f2e61a0f34ca4022c9c00005c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3757948847802554841, guid: 177d3b2c70ffb9b48ab06207347502ed, type: 3}
+  spawnPoint: {fileID: 0}
+  spawnPointTwo: {fileID: 0}
+  spawnPointThree: {fileID: 0}
+  timeBetweenWaves: 30
+  waveCountdownText: {fileID: 0}
+  waveCounter: 0
+  startCountdown: 5
+--- !u!114 &811591685133595642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811591685133595589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef6b6ef359fb34aa2bd27b424fd5f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicTurretPrefab: {fileID: 8508239518857548466, guid: 6454ecdfe125fce4ba09558d97b104b1, type: 3}
+  heavyTurretPrefab: {fileID: 7020657394767263452, guid: 46341f12445e0164c8e372dac92dd565, type: 3}
+  buildEffect: {fileID: 2672414842134101313, guid: c167bb04a8cb88b41a536f27ea4a5848, type: 3}
+--- !u!114 &811591685133595641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811591685133595589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a37f27ac6960b429a621b7dd8d7585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingPoints: 400
+  PlayerHealthBar: {fileID: 0}
+  playerStartingHP: 10
+--- !u!114 &811591685133595640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811591685133595589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902d0e350c4336547a988e50d96f7157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}

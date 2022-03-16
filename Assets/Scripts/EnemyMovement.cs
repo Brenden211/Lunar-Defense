@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
+    public Transform GameMaster;
     public float updateFrequency = 0.1f;
     public Animator soldierAnimator;
+    public float damageTake = 2f;
 
     private float updateCounter = 0;
     private NavMeshAgent agent;
@@ -15,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+
         if (target != null)
         {
             agent = this.transform.GetComponent<NavMeshAgent>();
@@ -38,11 +40,18 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
         {
-            Debug.Log("Target Found!");
-            soldierAnimator.SetTrigger("Idle");
             Destroy(gameObject);
+            TakeDamage(GameMaster);
         }
+    }
+
+    void TakeDamage(Transform playerStats)
+    {
+        PlayerStats p = playerStats.GetComponent<PlayerStats>();
+
+        p.PlayerTakeDamage(damageTake);
     }
 }
