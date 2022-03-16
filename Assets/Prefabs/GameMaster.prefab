@@ -69,6 +69,7 @@ MonoBehaviour:
   basicTurretPrefab: {fileID: 8508239518857548466, guid: 6454ecdfe125fce4ba09558d97b104b1, type: 3}
   heavyTurretPrefab: {fileID: 7020657394767263452, guid: 46341f12445e0164c8e372dac92dd565, type: 3}
   buildEffect: {fileID: 2672414842134101313, guid: c167bb04a8cb88b41a536f27ea4a5848, type: 3}
+  nodeUI: {fileID: 0}
 --- !u!114 &811591685133595641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a37f27ac6960b429a621b7dd8d7585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPoints: 400
+  startingPoints: 450
   PlayerHealthBar: {fileID: 0}
   playerStartingHP: 10
 --- !u!114 &811591685133595640
