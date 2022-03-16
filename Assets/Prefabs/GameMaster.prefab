@@ -53,7 +53,7 @@ MonoBehaviour:
   timeBetweenWaves: 30
   waveCountdownText: {fileID: 0}
   waveCounter: 0
-  startCountdown: 5
+  startCountdown: 30
 --- !u!114 &811591685133595642
 MonoBehaviour:
   m_ObjectHideFlags: 0

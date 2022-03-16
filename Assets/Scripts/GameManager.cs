@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         if (gameIsOver)
             return;
 
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("r"))
         {
             EndGame();
         }

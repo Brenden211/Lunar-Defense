@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6230369154638565136, guid: 2d56cc02d87bcf244a34d564fffc29e9, type: 3}
-  GameMaster: {fileID: 811591685133595643, guid: 09b272376c358ff4f8a9b33f991e5433, type: 3}
+  gameMaster: {fileID: 811591685133595643, guid: 09b272376c358ff4f8a9b33f991e5433, type: 3}
   updateFrequency: 0.1
   soldierAnimator: {fileID: 3847552739422305503}
   damageTake: 2

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
-    public Transform GameMaster;
+    public Transform gameMaster;
     public float updateFrequency = 0.1f;
     public Animator soldierAnimator;
     public float damageTake = 2f;
@@ -44,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
         {
             Destroy(gameObject);
-            TakeDamage(GameMaster);
+            TakeDamage(gameMaster);
         }
     }
 
@@ -52,6 +52,10 @@ public class EnemyMovement : MonoBehaviour
     {
         PlayerStats p = playerStats.GetComponent<PlayerStats>();
 
-        p.PlayerTakeDamage(damageTake);
+        if (p != null)
+        {
+            p.PlayerTakeDamage(damageTake);
+        }
+        
     }
 }
